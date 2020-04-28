@@ -1,38 +1,43 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
+import { Switch, Route } from 'react-router';
+import ballImage from './nba_ball.png';
 import './App.css';
 import Axios from 'axios';
+import Teams from './components/Teams'
+import TeamDetails from  './components/TeamDetails'
+import NbaNews from './components/NbaNews';
+import Navbar from './components/Navbar';
+import Home from './components/Home';
 
+//NBA Team
 let baseURL = 'https://www.balldontlie.io/api/v1/'
 let endPoints = { 
   'teams': 'teams',
   'players': 'players',
-  'stats': 'stats'
+  'seasonAvg': 'season_averages?player_ids[]=237',
 }
+
+//NBA News - News API
+let newsBaseURL = 'https://newsapi.org/'
+let newEndPoint = 'v2/everything?q=nba&apiKey=38407b35f95c48359a0c4b5337e10220'
+let newEndPointAbbrv = newEndPoint
+
 
 class App extends Component {
 
   constructor(props) {
     super(props);
     this.state = { 
-      allTeams: [],
-      allPlayers: [],
-      allStats: []
+      playersData: [],
+      seasonAvgData: [],
+      teamsData: [],
+      nbaNews :[]
     }
     //define params here and pass to function
     this.params = {}
 }
-  // state = {
-  //   allTeams: [],
-  //   allPlayers: [],
-  //   allStats: []
-  // }
 
-  // Older API Call
-  //async await - Sequential calls or independent functions
-  // componentDidMount = () => {
-
-  // }
 
   componentDidMount() {
     console.log(
@@ -47,6 +52,15 @@ class App extends Component {
                     key
                 );
             });
+            
+            //API Call for news
+            Axios.get(newsBaseURL+newEndPointAbbrv)
+          .then(responseNews => {
+            console.log(responseNews)  
+            this.setState({
+              nbaNews: responseNews.data.articles
+            })
+          })
     }
 
     /**API ENDPOINT FUNCTIONS */
@@ -58,36 +72,14 @@ getDataFromEndpoints = (endPoint, params, stateKey) => {
               [`${stateKey}DataError`]: null,
           }, () => {
               Axios.get(`${baseURL}${endPoint}`)
-              .then(res => {
-                console.log(res)  
-                const { data } = res;
-                  this.setState({
-                      [`${stateKey}DataLoading`]: false,
-                      [`${stateKey}Data`]: data.results,
-                      [`${stateKey}DataError`]: false,
-                  })
+              .then(response => {
+                console.log(response)  
+                this.setState({
+                  [`${stateKey}Data`]: response.data.data
+                });
               })
               .catch(error => {
-                  if (error.response) {
-                  /** The request was made and the server responded with a status code that falls out of the range of 2xx **/
-                  console.log(error.response.data);
-                  console.log(error.response.status);
-                  console.log(error.response.headers);
-                  } else if (error.request) {
-                  /** The request was made but no response was received `error.request` is an instance of XMLHttpRequest in the browser and an instance of http.ClientRequest in node.js **/
-                  console.log(error.request);
-                  } else {
-                  /** Something happened in setting up the request that triggered an Error **/
-                  console.log('Error', error.message);
-                  }
-                  /** Setting DataError true and DataErrorString **/
-                  
-                  this.setState({
-                      [`${stateKey}DataLoading`]: false,
-                      [`${stateKey}DataError`]: true,
-                      [`${stateKey}DataErrorString`]: error.message,
-                  })
-                  console.log(error.config);
+                console.log(error)
               }) 
           });
       }
@@ -102,25 +94,52 @@ getDataFromEndpoints = (endPoint, params, stateKey) => {
 
   
   render() {
+    const {
+      // allTeamsDataLoading,
+      // allTeamsDataError,
+      // allTeamsDataErrorString,
+      // allPlayersData,
+      // allPlayersDataLoading,
+      // allPlayersDataError,
+      // allPlayersDataErrorString,
+      // allStatsData,
+      // allStatsDataLoading,
+      // allStatsDataError,
+      // allStatsDataErrorString
+      teamsData,
+      nbaNews
+} = this.state;
+    
     return (
       <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src={ballImage} className="Ball-logo" alt="basketball" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          <strong>Hoops</strong>
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-      
- 
         
+      </header>
+      <Navbar/>
+      <React.Fragment>
+      <section className="container">
+          <section className="nbaStyle">
+          <h3>NBA Teams</h3>
+          <Teams allTeamsData = {teamsData}/>
+          </section>
+         
+        
+        
+          <Switch>
+          <Route exact path='/' render={(props) => <Home {...props} nbaNews={this.state.nbaNews} />}/>
+          <Route exact path='/teams' render={(props) => <Teams {...props} allTeamsData={teamsData} />}/>
+          <Route exact path='/team/:teamID' render={(props) => <TeamDetails {...props} allTeamsData={teamsData} />}/>
+          <Route exact path='/nbaNews' render={(props) => <NbaNews {...props} allNBANews={nbaNews} />}/>
+
+
+          </Switch>
+          
+          </section>
+          </React.Fragment>
     </div>
     );
   }
