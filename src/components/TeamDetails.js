@@ -13,7 +13,8 @@ class TeamDetails extends Component {
             {teamObj? 
             (<div>
             <h1>{teamObj.full_name}</h1>
-            <p>{teamObj.full_name}</p>
+            <p>{teamObj.conference}</p>
+            <p>{teamObj.division}</p>
             <p></p>
             <p></p>
             

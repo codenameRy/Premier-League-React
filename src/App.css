@@ -1,3 +1,4 @@
+
 .App {
   text-align: center;
 }
@@ -42,7 +43,11 @@
   flex-direction: row;
   justify-content: space-evenly;
   width: 100%;
-  padding: 0 20px;
+  padding: 0 10px;
 }
 
+.nbaStyle {
+  justify-content: left;
+  font-size: ;
+}
 
