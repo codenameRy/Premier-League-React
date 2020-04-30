@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Players from './Players'
 
 class TeamDetails extends Component {
     render() {
@@ -17,6 +18,7 @@ class TeamDetails extends Component {
             <p>{teamObj.division}</p>
             <p></p>
             <p></p>
+            {/* <PlayerDetails allPlayersData = {this.props.playersData}/> */}
             
             </div>):
             ("Loading...")}

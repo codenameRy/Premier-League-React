@@ -6,6 +6,7 @@ import './App.css';
 import Axios from 'axios';
 import Teams from './components/Teams'
 import TeamDetails from  './components/TeamDetails'
+import Players from './components/Players'
 import NbaNews from './components/NbaNews';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
@@ -106,6 +107,7 @@ getDataFromEndpoints = (endPoint, params, stateKey) => {
       // allStatsDataLoading,
       // allStatsDataError,
       // allStatsDataErrorString
+      playersData,
       teamsData,
       nbaNews
 } = this.state;
@@ -126,6 +128,9 @@ getDataFromEndpoints = (endPoint, params, stateKey) => {
           <h3>NBA Teams</h3>
           <Teams allTeamsData = {teamsData}/>
           </section>
+          {/* <section>
+          
+          </section> */}
          
         
         
@@ -134,6 +139,8 @@ getDataFromEndpoints = (endPoint, params, stateKey) => {
           <Route exact path='/teams' render={(props) => <Teams {...props} allTeamsData={teamsData} />}/>
           <Route exact path='/team/:teamID' render={(props) => <TeamDetails {...props} allTeamsData={teamsData} />}/>
           <Route exact path='/nbaNews' render={(props) => <NbaNews {...props} allNBANews={nbaNews} />}/>
+          <Route exact path='/team/Players' render={(props) => <Players {...props}  />}/>
+
 
 
           </Switch>
