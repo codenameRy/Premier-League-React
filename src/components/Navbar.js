@@ -1,4 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
+
 
 export default class Navbar extends Component {
     componentDidMount(){ //window.onload happens once when the components first mounts 
@@ -6,20 +8,13 @@ export default class Navbar extends Component {
     }
     render() {
         return (
-            <nav className="navbar navbar-dark bg-primary mb-3">
+            <nav className="navbar navbar-dark bg-primary mb-3 ">
             <div className="container">
+            <div></div>
             <a className="navbar-brand" href="/">Home</a>
-            <a className="navbar-brand" href="/">Teams</a>
-            <a className="navbar-brand" href="/">Players</a>
-            <div className="dropdown">
-                {/* <button className="btn btn-secondary dropdown-toggle bg-primary mb-3" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown button
-                </button>
-                <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a className="dropdown-item" href="/">Action</a>
-                    <a className="dropdown-item" href="/">Another action</a>
-                    <a className="dropdown-item" href="/">Something else here</a>
-                </div> */}
+            <Link className="navbar-brand" to="/VideoPlayer">Video Player</Link>
+            <div>
+                
 </div>
             </div>
       </nav>

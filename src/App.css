@@ -58,3 +58,27 @@
   overflow-x: auto;
   overflow-y: hidden;
 } */
+
+/* .player-wrapper {
+display: flex;
+flex-direction: column;
+object-fit: cover;
+
+} */
+
+/* .nbaStyle {
+  display: flex;
+  } */
+
+.player-wrapper {
+    width: auto; 
+    height: auto
+  }
+  .react-player {
+    
+    position: relative; 
+  }
+  
+  .react-player > div {
+    position: absolute 
+  }

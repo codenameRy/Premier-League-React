@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Players from './Players'
 
 class TeamDetails extends Component {
     render() {
