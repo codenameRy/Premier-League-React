@@ -4,28 +4,28 @@ import React, { Component } from 'react';
 
 class TeamDetails extends Component {
 
-    getTeamInfo = () => {
-        let teamID = this.props.match.params.teamID
-        let teamObj = this.props.allTeamsData.find(eachTeam => {
-            console.log(eachTeam.id)
-        return eachTeam.id == teamID
-        })
-        // let nickName = teamObj ? teamObj.full_name.split(' ').reverse()[0] : undefined;
-        // //reverse alternative with [0]
-        return teamObj?.name;
-    }
-    componentDidMount() {
-        let nN = this.getTeamInfo();
-        console.log(nN)
-        if(nN)this.props.getSecondTeam(nN);
-    }
-    componentDidUpdate(prevProps) {
-        if(this.props.allTeamsData !== prevProps.allTeamsData || this.props.match.params.teamID !== prevProps.match.params.teamID) {
-            let nN = this.getTeamInfo();
-            console.log(nN)
-            this.props.getSecondTeam(nN);
-        }
-    }
+    // getTeamInfo = () => {
+    //     let teamID = this.props.match.params.teamID
+    //     let teamObj = this.props.allTeamsData.find(eachTeam => {
+    //         console.log(eachTeam.id)
+    //     return eachTeam.id == teamID
+    //     })
+    //     // let nickName = teamObj ? teamObj.full_name.split(' ').reverse()[0] : undefined;
+    //     // //reverse alternative with [0]
+    //     return teamObj?.name;
+    // }
+    // componentDidMount() {
+    //     let nN = this.getTeamInfo();
+    //     console.log(nN)
+    //     if(nN)this.props.getSecondTeam(nN);
+    // }
+    // componentDidUpdate(prevProps) {
+    //     if(this.props.allTeamsData !== prevProps.allTeamsData || this.props.match.params.teamID !== prevProps.match.params.teamID) {
+    //         let nN = this.getTeamInfo();
+    //         console.log(nN)
+    //         this.props.getSecondTeam(nN);
+    //     }
+    // }
     render() {
         let teamID = this.props.match.params.teamID
         let teamObj = this.props.allTeamsData.find(eachTeam => {
@@ -33,11 +33,7 @@ class TeamDetails extends Component {
         return eachTeam.id == teamID
         })
         console.log(teamID, this.props, teamObj )
-        // let teamIDx = this.props.match.params.teamIDx
-        // let secondTeam = this.props.secondAPIData.find(newSecondTeam => {
-        //     console.log(newSecondTeam)
-        //     return newSecondTeam.name == teamIDx
-        // })
+    
 
         return (
             <div>

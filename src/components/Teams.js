@@ -8,7 +8,7 @@ class Teams extends Component {
         return this.props.allTeamsData.map(eachTeam => {
             return (
                 <ul key={eachTeam.id}>
-                  <MDBListGroupItem><Link to={`/team/${eachTeam.id}`}>
+                  <MDBListGroupItem><Link to={`/teams/${eachTeam.id}`}>
                   
                   <h2>{eachTeam.full_name}</h2>
                   
