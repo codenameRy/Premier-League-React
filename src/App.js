@@ -10,6 +10,7 @@ import NbaNews from './components/NbaNews';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import VideoPlayer from './components/VideoPlayer'
+import NbadotAPI from './components/NbadotAPI'
 
 //NBA Team
 let baseURL = 'https://www.balldontlie.io/api/v1/'
@@ -21,7 +22,7 @@ let endPoints = {
 
 //NBA News - News API
 let newsBaseURL = 'https://newsapi.org/'
-let newEndPoint = 'v2/everything?q=nba&apiKey=38407b35f95c48359a0c4b5337e10220'
+let newEndPoint = 'v2/everything?q=premierleague&apiKey=38407b35f95c48359a0c4b5337e10220'
 let newEndPointAbbrv = newEndPoint
 
 //New Sports API
@@ -37,11 +38,10 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = { 
-      playersData: [],
-      seasonAvgData: [],
       teamsData: [],
       nbaNews :[],
-      newNBATeam: []
+      newNBATeam: [],
+      thirdAPIData: []
     }
     //define params here and pass to function
     this.params = {}
@@ -79,22 +79,23 @@ getSecondAPITeam = (nickName) => {
             //API Call for news
             Axios.get(newsBaseURL+newEndPointAbbrv)
           .then(responseNews => {
-            // console.log(responseNews)  
+            console.log(responseNews)  
             this.setState({
               nbaNews: responseNews.data.articles
             })
           })
 
-          let URL = 'https://cors-anywhere.herokuapp.com/https://sports.yahoo.com/site/api/resource/sports.league.standings;alias=mini_standings;combineGroups=;conference=;count=100;division=;league=nba;leagueSeason=standings;season=;seasonPeriod=;topDivisionOnly=?bkt=identity-session-ext-test&device=desktop&ecma=modern&feature=canvassOffnet%2CenableCMP%2CenableConsentData%2CnewMyTeamsNav%2Csp-nav-test%2CenableCCPAFooter%2CenableReconsent%2CvideoShowTest%2CsubscriptionsOff%2Cpreview2020%2Cga2020%2CnewContentAttribution%2Clivecoverage%2CcaasSmartphone%2Ccanvass%2CnflLiveVideo%2CdesktopNotifications%2CsearchAssist%2Clicensed-only%2CdfsFavoriteTeamPromo%2CnewLogo%2CsponsoredAds%2CenableBetSlip&intl=us&lang=en-US&partner=none&prid=e9t9c5tfamo1i&region=US&site=sports&tz=America%2FNew_York&ver=1.0.5731&returnMeta=true'
+          let URL = 'https://apiv2.apifootball.com/?action=get_teams&league_id=148&APIkey=5a5136a8e97300f3bf6c932e3dcfe239c20c51661a12794cc263c20f94ef6a8b'
           Axios.get(URL)
             .then((response)=>{
               console.log(response)
             this.setState({
-              thirdAPIData: response.data.data.teams 
+              thirdAPIData: response.data.data
+ 
             }) 
           })
           
-    } // End on componentDid Moint
+    } // End on componentDid Mount
             
 
     /**API ENDPOINT FUNCTIONS */
@@ -142,7 +143,8 @@ getDataFromEndpoints = (endPoint, params, stateKey) => {
       // allStatsDataErrorString
       // playersData,
       teamsData,
-      nbaNews
+      nbaNews,
+      thirdAPIData
 } = this.state;
     
     return (
@@ -160,6 +162,7 @@ getDataFromEndpoints = (endPoint, params, stateKey) => {
           <section className="nbaStyle">
           <h3><strong>NBA Teams</strong></h3>
           <Teams allTeamsData = {teamsData}/>
+          <NbadotAPI thirdAPIData={thirdAPIData}/>
           </section>
           {/* <section>
           
@@ -172,6 +175,8 @@ getDataFromEndpoints = (endPoint, params, stateKey) => {
           <Route exact path='/teams' render={(props) => <Teams {...props} allTeamsData={teamsData} />}/>
           <Route exact path='/team/:teamID' render={(props) => <TeamDetails {...props} secondAPIData = {this.state.secondAPIData} getSecondTeam={this.getSecondAPITeam} allTeamsData={teamsData} />}/>
           <Route exact path='/nbaNews' render={(props) => <NbaNews {...props} allNBANews={nbaNews} />}/>
+          <Route exact path='/nbaDotAPI' render={(props) => <NbadotAPI {...props} thirdAPIData={thirdAPIData} />}/>
+
           <Route path="/VideoPlayer" component={VideoPlayer} />
           </Switch>
           
