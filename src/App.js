@@ -25,8 +25,12 @@ let newEndPoint = 'v2/everything?q=nba&apiKey=38407b35f95c48359a0c4b5337e10220'
 let newEndPointAbbrv = newEndPoint
 
 //New Sports API
-// let bballURL = 'https://api-nba-v1.p.rapidapi.com/'
-// let bballEndPoints = 'teams&x-rapidapi-key=50599fc345mshab48f1d06f317c5p14b68ajsn32148e6c9481'
+let bballURL = 'https://api-nba-v1.p.rapidapi.com/'
+let bballEndPoints = 'teams/nickName/'
+
+//3rd Sports API
+let sportsAPI = 'https://api-nba-v1.p.rapidapi.com/'
+let sEndpoint = 'teams'
 
 class App extends Component {
 
@@ -43,6 +47,20 @@ class App extends Component {
     this.params = {}
 }
 
+getSecondAPITeam = (nickName) => {
+  Axios.get(bballURL+bballEndPoints+nickName,{
+      headers:{
+        'x-rapidapi-host': 'api-nba-v1.p.rapidapi.com',
+       'x-rapidapi-key': '50599fc345mshab48f1d06f317c5p14b68ajsn32148e6c9481'
+      }})
+   
+      .then((response)=>{
+        console.log(response)
+      this.setState({
+        secondAPIData: response.data
+      })
+    })
+}
 
   componentDidMount() {
     console.log(
@@ -61,14 +79,20 @@ class App extends Component {
             //API Call for news
             Axios.get(newsBaseURL+newEndPointAbbrv)
           .then(responseNews => {
-            console.log(responseNews)  
+            // console.log(responseNews)  
             this.setState({
               nbaNews: responseNews.data.articles
             })
           })
 
-
-
+          let URL = 'https://cors-anywhere.herokuapp.com/https://sports.yahoo.com/site/api/resource/sports.league.standings;alias=mini_standings;combineGroups=;conference=;count=100;division=;league=nba;leagueSeason=standings;season=;seasonPeriod=;topDivisionOnly=?bkt=identity-session-ext-test&device=desktop&ecma=modern&feature=canvassOffnet%2CenableCMP%2CenableConsentData%2CnewMyTeamsNav%2Csp-nav-test%2CenableCCPAFooter%2CenableReconsent%2CvideoShowTest%2CsubscriptionsOff%2Cpreview2020%2Cga2020%2CnewContentAttribution%2Clivecoverage%2CcaasSmartphone%2Ccanvass%2CnflLiveVideo%2CdesktopNotifications%2CsearchAssist%2Clicensed-only%2CdfsFavoriteTeamPromo%2CnewLogo%2CsponsoredAds%2CenableBetSlip&intl=us&lang=en-US&partner=none&prid=e9t9c5tfamo1i&region=US&site=sports&tz=America%2FNew_York&ver=1.0.5731&returnMeta=true'
+          Axios.get(URL)
+            .then((response)=>{
+              console.log(response)
+            this.setState({
+              thirdAPIData: response.data.data.teams 
+            }) 
+          })
           
     } // End on componentDid Moint
             
@@ -146,7 +170,7 @@ getDataFromEndpoints = (endPoint, params, stateKey) => {
           <Switch>
           <Route exact path='/' render={(props) => <Home {...props} nbaNews={this.state.nbaNews} />}/>
           <Route exact path='/teams' render={(props) => <Teams {...props} allTeamsData={teamsData} />}/>
-          <Route exact path='/team/:teamID' render={(props) => <TeamDetails {...props} allTeamsData={teamsData} />}/>
+          <Route exact path='/team/:teamID' render={(props) => <TeamDetails {...props} secondAPIData = {this.state.secondAPIData} getSecondTeam={this.getSecondAPITeam} allTeamsData={teamsData} />}/>
           <Route exact path='/nbaNews' render={(props) => <NbaNews {...props} allNBANews={nbaNews} />}/>
           <Route path="/VideoPlayer" component={VideoPlayer} />
           </Switch>

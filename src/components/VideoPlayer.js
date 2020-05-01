@@ -4,47 +4,61 @@ import ReactPlayer from "react-player";
 class VideoPlayer extends Component {
   render() {
     return (
-      <div className='player-wrapper'>
-      <h3><strong>Videos</strong></h3>
+      <div className="player-wrapper">
+        <h3>
+          <strong>Videos</strong>
+        </h3>
         <ReactPlayer
-        className='react-player' 
-        url="https://www.youtube.com/watch?v=fTxCvQMdb3I" 
-        controls
+          className="react-player"
+          url="https://www.youtube.com/watch?v=4T6x9Gjpa-U"
+          controls
         />
         <br></br>
         <ReactPlayer
-        className='react-player'
+          className="react-player"
+          url="https://www.youtube.com/watch?v=fTxCvQMdb3I"
+          controls
+        />
+        <br></br>
+        <ReactPlayer
+          className="react-player"
           url="https://www.youtube.com/watch?v=Y0aADEygLKQ"
           controls
         />
         <br></br>
         <ReactPlayer
-        className='react-player'
+          className="react-player"
           url="https://www.youtube.com/watch?v=tjRCk0JVzfc"
           controls
         />
         <br></br>
         <ReactPlayer
-        className='react-player'
+          className="react-player"
           url="https://www.youtube.com/watch?v=bOjUD-DyNBA"
           controls
         />
         <br></br>
         <ReactPlayer
-        className='react-player'
+          className="react-player"
           url="https://www.youtube.com/watch?v=BsL7pjxko7Q"
           controls
         />
         <br></br>
         <ReactPlayer
-        className='react-player'
+          className="react-player"
           url="https://www.youtube.com/watch?v=zNWBz4GCiUo"
           controls
         />
         <br></br>
         <ReactPlayer
-        className='react-player'
-          url="https://www.youtube.com/watch?v=4T6x9Gjpa-U"
+          className="react-player"
+          url="https://www.youtube.com/watch?v=IYfSmNGx-OM"
+          controls
+        />
+        <br></br>
+        <ReactPlayer
+          className="react-player"
+          url="https://www.youtube.com/watch?v=XzNODrnkY78"
           controls
         />
       </div>
@@ -53,5 +67,3 @@ class VideoPlayer extends Component {
 }
 
 export default VideoPlayer;
-
-

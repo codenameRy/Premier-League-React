@@ -12,7 +12,7 @@ export default class Navbar extends Component {
             <div className="container">
             <div></div>
             <a className="navbar-brand" href="/">Home</a>
-            <Link className="navbar-brand" to="/VideoPlayer">Video Player</Link>
+            <Link className="navbar-brand" to="/VideoPlayer">Videos</Link>
             <div>
                 
 </div>
