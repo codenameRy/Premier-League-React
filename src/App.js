@@ -11,6 +11,7 @@ import Navbar from './components/Navbar';
 import Home from './components/Home';
 import VideoPlayer from './components/VideoPlayer'
 import SoccerTeams from './components/SoccerTeams'
+import SoccerPlayers from './components/SoccerPlayers'
 
 //NBA Team
 let baseURL = 'https://www.balldontlie.io/api/v1/'
@@ -178,7 +179,7 @@ getDataFromEndpoints = (endPoint, params, stateKey) => {
           <Route exact path='/teams/:teamID' render={(props) => <TeamDetails {...props} allTeamsData={teamsData} />}/>
           <Route exact path='/nbaNews' render={(props) => <NbaNews {...props} allNBANews={nbaNews} />}/>
           <Route exact path='/SoccerTeams' render={(props) => <SoccerTeams {...props} soccerAPI={soccerAPI} />}/>
-          <Route exact path='/SoccerTeams/:teamID' render={(props) => <SoccerTeams {...props} soccerAPI={soccerAPI} />}/>
+          <Route exact path='/SoccerTeams/:playerID' render={(props) => <SoccerPlayers {...props} soccerAPI={soccerAPI} />}/>
 
 
           <Route path="/VideoPlayer" component={VideoPlayer} />

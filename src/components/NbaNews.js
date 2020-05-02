@@ -7,15 +7,11 @@ class NbaNews extends Component {
     nbaNews = () => {
         return this.props.allNBANews.map((eachNews, i) => {
 
-            //Pagination - Variable when user clicks
-            //Cards 
-            //slice(0,10)
-            
             return (
                 <ul key={i}>
                   <MDBMedia tag="li">
         <MDBMedia left href={eachNews.url} target="_blank" rel="noopener noreferrer">
-          <MDBMedia style={{width: "40vh"}} object src={eachNews.urlToImage}  alt="Generic placeholder image" />
+          <MDBMedia style={{width: "50vh"}} object src={eachNews.urlToImage}  alt="Generic placeholder image" />
         </MDBMedia>
         <MDBMedia body>
           <MDBMedia heading>

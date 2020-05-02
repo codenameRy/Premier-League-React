@@ -51,28 +51,11 @@
   font-size: 20px
 }
 
-/* .newsParent {
-  list-style: none;
- 
-  white-space: pre-wrap;
-  overflow-x: auto;
-  overflow-y: hidden;
-} */
-
-/* .player-wrapper {
-display: flex;
-flex-direction: column;
-object-fit: cover;
-
-} */
-
-/* .nbaStyle {
-  display: flex;
-  } */
 
 .player-wrapper {
     width: auto; 
-    height: auto
+    height: auto;
+    
   }
   .react-player {
     
@@ -81,4 +64,19 @@ object-fit: cover;
   
   .react-player > div {
     position: absolute 
+  }
+
+  .teams {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    font-size: 2em;
+    text-decoration: none;
+    /* border-style: double; */
+    
+  }
+
+  .teamBox {
+    box-shadow: 0px 10px 1px #ddd, 0 10px 20px #ccc;
+    padding: 1em;
   }
