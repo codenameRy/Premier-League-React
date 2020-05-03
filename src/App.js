@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-// import logo from './logo.svg';
+import logo from './logo.svg';
 import { Switch, Route } from 'react-router';
-import ballImage from './nba_ball.png';
+// import ballImage from './nba_ball.png';
 import './App.css';
 import Axios from 'axios';
 import Teams from './components/Teams'
@@ -10,6 +10,7 @@ import NbaNews from './components/NbaNews';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import VideoPlayer from './components/VideoPlayer'
+import BackgroundVideo from './components/BackgroundVideo'
 import SoccerTeams from './components/SoccerTeams'
 import SoccerPlayers from './components/SoccerPlayers'
 
@@ -23,7 +24,7 @@ let endPoints = {
 
 //NBA News - News API
 let newsBaseURL = 'https://newsapi.org/'
-let newEndPoint = 'v2/everything?q=premierleague&apiKey=38407b35f95c48359a0c4b5337e10220'
+let newEndPoint = 'v2/everything?q=premierleague&sortBy=popularity&apiKey=38407b35f95c48359a0c4b5337e10220'
 let newEndPointAbbrv = newEndPoint
 
 // //New Sports API
@@ -133,18 +134,6 @@ getDataFromEndpoints = (endPoint, params, stateKey) => {
   
   render() {
     const {
-      // allTeamsDataLoading,
-      // allTeamsDataError,
-      // allTeamsDataErrorString,
-      // allPlayersData,
-      // allPlayersDataLoading,
-      // allPlayersDataError,
-      // allPlayersDataErrorString,
-      // allStatsData,
-      // allStatsDataLoading,
-      // allStatsDataError,
-      // allStatsDataErrorString
-      // playersData,
       teamsData,
       nbaNews,
       soccerAPI
@@ -152,28 +141,20 @@ getDataFromEndpoints = (endPoint, params, stateKey) => {
     
     return (
       <div className="App">
-      <header className="App-header">
+      {/* <header className="App-header">
         <img src={ballImage} className="Ball-logo" alt="basketball" />
         <p>
           <strong>Hoops</strong>
         </p>
-        
-      </header>
+      </header> */}
+      <BackgroundVideo />
       <Navbar/>
       <React.Fragment>
       <section className="container">
-          {/* <section className="nbaStyle">
-          <h3><strong>NBA Teams</strong></h3>
-          <NbadotAPI thirdAPIData={thirdAPIData}/>
-          </section> */}
-          {/* <section>
-          
-          </section> */}
-         
-        
-        
+
           <Switch>
           <Route exact path='/' render={(props) => <Home {...props} nbaNews={nbaNews} />}/>
+          <Route exact path='/home' render={(props) => <Home {...props} nbaNews={nbaNews} />}/>
           {/* <Route exact path='/' render={(props) => <Teams {...props} allTeamsData={this.state.teamsData} />}/> */}
           <Route exact path='/teams' render={(props) => <Teams {...props} allTeamsData={teamsData} />}/>
           <Route exact path='/teams/:teamID' render={(props) => <TeamDetails {...props} allTeamsData={teamsData} />}/>
@@ -183,6 +164,7 @@ getDataFromEndpoints = (endPoint, params, stateKey) => {
 
 
           <Route path="/VideoPlayer" component={VideoPlayer} />
+          
           </Switch>
           
           </section>

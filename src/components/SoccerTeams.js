@@ -6,14 +6,15 @@ class SoccerTeams extends Component {
     return this.props.soccerAPI.map((eachTeam, i) => {
       return (
         <div className = "teamBox" key={i}>
+        <p>{eachTeam.team_name}</p>{" "}
           <Link to={`/SoccerTeams/${eachTeam.team_name}`}>
-            <p>{eachTeam.team_name}</p>{" "}
-          </Link>
           <img
             // style={{ width: "50px" }}
             src={eachTeam.team_badge}
             alt={eachTeam.team_badge}
           />
+          </Link>
+          
         </div>
       );
     });

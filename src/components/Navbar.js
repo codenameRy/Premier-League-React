@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import premierLargeLogo from './images/premier_logo_large.png'
 
 export default class Navbar extends Component {
   componentDidMount() {
@@ -11,10 +12,14 @@ export default class Navbar extends Component {
     return (
       <nav className="navbar navbar-light">
         <div className="container">
-          <div></div>
-          <a className="navbar" href="/">
+          <div>
+          
+          <img src={premierLargeLogo} height="30px" className="Ball" alt="football" />
+        
+        </div>
+          <Link className="navbar" to="/">
             Home
-          </a>
+          </Link>
           <Link className="navbar" to="/Teams">
             Teams
           </Link>
@@ -25,7 +30,6 @@ export default class Navbar extends Component {
             Videos
           </Link>
 
-          <div></div>
         </div>
       </nav>
     );
