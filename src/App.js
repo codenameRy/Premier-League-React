@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Switch, Route, Router } from 'react-router';
+import { Switch, Route } from 'react-router';
 // import ballImage from './nba_ball.png';
 import './App.css';
 import Axios from 'axios';
@@ -16,8 +16,6 @@ import History from './components/History'
 import About from './components/About'
 import ScrollToTop from './components/ScrollToTop'
 
-// import { ConnectedRouter } from 'react-router-redux'
-// import browserHistory from 'react-history/BrowserHistory'
 
 //Soccer Team Info
 let baseURL = 'https://www.balldontlie.io/api/v1/'
@@ -102,7 +100,7 @@ getDataFromEndpoints = (endPoint, params, stateKey) => {
           }, () => {
               Axios.get(`${baseURL}${endPoint}`)
               .then(response => {
-                console.log(response)  
+                // console.log(response)  
                 this.setState({
                   [`${stateKey}Data`]: response.data.data
                 });

@@ -13,20 +13,17 @@ class SoccerPlayers extends Component {
       <div>
         {teamObj ? (
           <div>
+            <br></br>
             <h1>{teamObj.team_name}</h1>
             <img
               // style={{ width: "50px" }}
               src={teamObj.team_badge}
               alt={teamObj.team_badge}
             />
-
             <h2>
               <br></br>
               <strong>Player Details </strong>
-              {teamObj.players.map(
-                (player, i) => (
-                  <div key={i}>
-                  <MDBTable hover>
+              <MDBTable hover>
                     <MDBTableHead>
                       <tr>
                         <th>Name</th>
@@ -34,23 +31,21 @@ class SoccerPlayers extends Component {
                         <th>Position</th>
                         <th>Country</th>
                       </tr>
-                      </MDBTableHead>
-                      <MDBTableBody>
-                      <tr>
+                    </MDBTableHead>
+                <MDBTableBody>
+              {teamObj.players.map(
+                (player, i) => (
+                  <tr key={i}>
                         <td>{player.player_name}</td>
                         <td>{player.player_age}</td>
-                        <td>{player.player_type.substr(0, player.player_type.length - 1)}
-                      </td>
+                        <td>{player.player_type.substr(0, player.player_type.length - 1)}</td>
                       <td>{player.player_country}</td>
-                      </tr>
-                      </MDBTableBody>
-                    </MDBTable>
-                    
-                  </div>
+                  </tr>
                 )
               )}
+                </MDBTableBody>
+              </MDBTable>
             </h2>
-            <p></p>
           </div>) : 
           (
           "Loading..."
