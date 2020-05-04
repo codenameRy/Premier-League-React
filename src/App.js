@@ -138,7 +138,7 @@ getDataFromEndpoints = (endPoint, params, stateKey) => {
         {/* <Router onUpdate={() => window.scrollTo(0, 0)} history={browserHistory}> */}
           <Switch>
           <Route exact path='/' render={(props) => <Home {...props} nbaNews={nbaNews} />}/>
-          {/* <Route exact path='/home' render={(props) => <Home {...props} nbaNews={nbaNews} />}/> */}
+          <Route exact path='/home' render={(props) => <Home {...props} nbaNews={nbaNews} />}/>
           {/* <Route exact path='/' render={(props) => <Teams {...props} allTeamsData={this.state.teamsData} />}/> */}
           {/* <Route exact path='/teams' render={(props) => <Teams {...props} allTeamsData={teamsData} />}/>
           <Route exact path='/teams/:teamID' render={(props) => <TeamDetails {...props} allTeamsData={teamsData} />}/> */}

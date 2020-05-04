@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Premier-League-React/static/css/main.244bea7d.chunk.css",
-    "main.js": "/Premier-League-React/static/js/main.cfed377a.chunk.js",
-    "main.js.map": "/Premier-League-React/static/js/main.cfed377a.chunk.js.map",
+    "main.js": "/Premier-League-React/static/js/main.48ffcbcc.chunk.js",
+    "main.js.map": "/Premier-League-React/static/js/main.48ffcbcc.chunk.js.map",
     "runtime-main.js": "/Premier-League-React/static/js/runtime-main.a2473ba9.js",
     "runtime-main.js.map": "/Premier-League-React/static/js/runtime-main.a2473ba9.js.map",
     "static/css/2.16eeabf5.chunk.css": "/Premier-League-React/static/css/2.16eeabf5.chunk.css",
     "static/js/2.a0796704.chunk.js": "/Premier-League-React/static/js/2.a0796704.chunk.js",
     "static/js/2.a0796704.chunk.js.map": "/Premier-League-React/static/js/2.a0796704.chunk.js.map",
     "index.html": "/Premier-League-React/index.html",
-    "precache-manifest.4adf8dd82ec96bd6c998cfd0a0fb4f22.js": "/Premier-League-React/precache-manifest.4adf8dd82ec96bd6c998cfd0a0fb4f22.js",
+    "precache-manifest.b3d4188995c9041f847099e79ca24d5f.js": "/Premier-League-React/precache-manifest.b3d4188995c9041f847099e79ca24d5f.js",
     "service-worker.js": "/Premier-League-React/service-worker.js",
     "static/css/2.16eeabf5.chunk.css.map": "/Premier-League-React/static/css/2.16eeabf5.chunk.css.map",
     "static/css/main.244bea7d.chunk.css.map": "/Premier-League-React/static/css/main.244bea7d.chunk.css.map",
@@ -24,6 +24,6 @@
     "static/css/2.16eeabf5.chunk.css",
     "static/js/2.a0796704.chunk.js",
     "static/css/main.244bea7d.chunk.css",
-    "static/js/main.cfed377a.chunk.js"
+    "static/js/main.48ffcbcc.chunk.js"
   ]
 }
