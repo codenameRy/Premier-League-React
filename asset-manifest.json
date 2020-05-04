@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/codenameRy/Premier-League-React.git/static/css/main.244bea7d.chunk.css",
-    "main.js": "/codenameRy/Premier-League-React.git/static/js/main.9a1a7656.chunk.js",
-    "main.js.map": "/codenameRy/Premier-League-React.git/static/js/main.9a1a7656.chunk.js.map",
-    "runtime-main.js": "/codenameRy/Premier-League-React.git/static/js/runtime-main.8b644d25.js",
-    "runtime-main.js.map": "/codenameRy/Premier-League-React.git/static/js/runtime-main.8b644d25.js.map",
-    "static/css/2.18f9a32c.chunk.css": "/codenameRy/Premier-League-React.git/static/css/2.18f9a32c.chunk.css",
-    "static/js/2.a0796704.chunk.js": "/codenameRy/Premier-League-React.git/static/js/2.a0796704.chunk.js",
-    "static/js/2.a0796704.chunk.js.map": "/codenameRy/Premier-League-React.git/static/js/2.a0796704.chunk.js.map",
-    "index.html": "/codenameRy/Premier-League-React.git/index.html",
-    "precache-manifest.39bfc03c15f4562d8574c055a0d6b2a8.js": "/codenameRy/Premier-League-React.git/precache-manifest.39bfc03c15f4562d8574c055a0d6b2a8.js",
-    "service-worker.js": "/codenameRy/Premier-League-React.git/service-worker.js",
-    "static/css/2.18f9a32c.chunk.css.map": "/codenameRy/Premier-League-React.git/static/css/2.18f9a32c.chunk.css.map",
-    "static/css/main.244bea7d.chunk.css.map": "/codenameRy/Premier-League-React.git/static/css/main.244bea7d.chunk.css.map",
-    "static/js/2.a0796704.chunk.js.LICENSE.txt": "/codenameRy/Premier-League-React.git/static/js/2.a0796704.chunk.js.LICENSE.txt",
-    "static/media/mdb.css": "/codenameRy/Premier-League-React.git/static/media/arrow_right.8ef6a08c.svg",
-    "static/media/all.min.css": "/codenameRy/Premier-League-React.git/static/media/fa-solid-900.ec763292.svg",
-    "static/media/premier_league_trophy.jpg": "/codenameRy/Premier-League-React.git/static/media/premier_league_trophy.8245771a.jpg",
-    "static/media/premier_logo_large.png": "/codenameRy/Premier-League-React.git/static/media/premier_logo_large.158cca25.png"
+    "main.css": "/Premier-League-React/static/css/main.244bea7d.chunk.css",
+    "main.js": "/Premier-League-React/static/js/main.48ffcbcc.chunk.js",
+    "main.js.map": "/Premier-League-React/static/js/main.48ffcbcc.chunk.js.map",
+    "runtime-main.js": "/Premier-League-React/static/js/runtime-main.a2473ba9.js",
+    "runtime-main.js.map": "/Premier-League-React/static/js/runtime-main.a2473ba9.js.map",
+    "static/css/2.16eeabf5.chunk.css": "/Premier-League-React/static/css/2.16eeabf5.chunk.css",
+    "static/js/2.a0796704.chunk.js": "/Premier-League-React/static/js/2.a0796704.chunk.js",
+    "static/js/2.a0796704.chunk.js.map": "/Premier-League-React/static/js/2.a0796704.chunk.js.map",
+    "index.html": "/Premier-League-React/index.html",
+    "precache-manifest.b3d4188995c9041f847099e79ca24d5f.js": "/Premier-League-React/precache-manifest.b3d4188995c9041f847099e79ca24d5f.js",
+    "service-worker.js": "/Premier-League-React/service-worker.js",
+    "static/css/2.16eeabf5.chunk.css.map": "/Premier-League-React/static/css/2.16eeabf5.chunk.css.map",
+    "static/css/main.244bea7d.chunk.css.map": "/Premier-League-React/static/css/main.244bea7d.chunk.css.map",
+    "static/js/2.a0796704.chunk.js.LICENSE.txt": "/Premier-League-React/static/js/2.a0796704.chunk.js.LICENSE.txt",
+    "static/media/mdb.css": "/Premier-League-React/static/media/arrow_right.8ef6a08c.svg",
+    "static/media/all.min.css": "/Premier-League-React/static/media/fa-solid-900.ec763292.svg",
+    "static/media/premier_league_trophy.jpg": "/Premier-League-React/static/media/premier_league_trophy.8245771a.jpg",
+    "static/media/premier_logo_large.png": "/Premier-League-React/static/media/premier_logo_large.158cca25.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.8b644d25.js",
-    "static/css/2.18f9a32c.chunk.css",
+    "static/js/runtime-main.a2473ba9.js",
+    "static/css/2.16eeabf5.chunk.css",
     "static/js/2.a0796704.chunk.js",
     "static/css/main.244bea7d.chunk.css",
-    "static/js/main.9a1a7656.chunk.js"
+    "static/js/main.48ffcbcc.chunk.js"
   ]
 }
