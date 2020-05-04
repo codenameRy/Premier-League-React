@@ -136,8 +136,10 @@ getDataFromEndpoints = (endPoint, params, stateKey) => {
       <section className="container">
        
           <Switch>
-          <Route exact path ='/' render={(props) => <Home {...props} nbaNews={nbaNews} />}/>
-          <Route path='/home' render={(props) => <Home {...props} nbaNews={nbaNews} />}/>
+          {/* <Route exact path ='/' render={(props) => <Home {...props} nbaNews={nbaNews} />}/> */}
+          
+          
+          
           {/* <Route exact path='/' render={(props) => <Teams {...props} allTeamsData={this.state.teamsData} />}/> */}
           {/* <Route exact path='/teams' render={(props) => <Teams {...props} allTeamsData={teamsData} />}/>
           <Route exact path='/teams/:teamID' render={(props) => <TeamDetails {...props} allTeamsData={teamsData} />}/> */}
@@ -149,6 +151,8 @@ getDataFromEndpoints = (endPoint, params, stateKey) => {
           <Route path="/VideoPlayer" component={VideoPlayer} />
           <Route path="/History" component={History} />
           <Route path="/About" component={About} />
+          <Route path='/home' render={(props) => <Home {...props} nbaNews={nbaNews} />}/>
+          <Route path ='/' render={(props) => <Home {...props} nbaNews={nbaNews} />}/>
           
           </Switch>
           {/* </Router> */}
