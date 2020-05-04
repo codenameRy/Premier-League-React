@@ -20,14 +20,20 @@ export default class Navbar extends Component {
           <Link className="navbar" to="/">
             Home
           </Link>
-          <Link className="navbar" to="/Teams">
+          {/* <Link className="navbar" to="/Teams">
             Teams
-          </Link>
+          </Link> */}
           <Link className="navbar" to="/SoccerTeams">
             Premier League Teams
           </Link>
           <Link className="navbar" to="/VideoPlayer">
             Videos
+          </Link>
+          <Link className="navbar" to="/History">
+            History
+          </Link>
+          <Link className="navbar" to="/About">
+            About
           </Link>
 
         </div>

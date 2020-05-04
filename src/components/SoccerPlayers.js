@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { MDBTable, MDBTableBody, MDBTableHead } from 'mdbreact';
 
 class SoccerPlayers extends Component {
   render() {
@@ -25,36 +26,33 @@ class SoccerPlayers extends Component {
               {teamObj.players.map(
                 (player, i) => (
                   <div key={i}>
-                    <table className="tableClass" >
-                      <thead>
+                  <MDBTable hover>
+                    <MDBTableHead>
                       <tr>
                         <th>Name</th>
                         <th>Age</th>
                         <th>Position</th>
                         <th>Country</th>
                       </tr>
-                      </thead>
-                      <tbody>
+                      </MDBTableHead>
+                      <MDBTableBody>
                       <tr>
-                        <td>{player.player_name} </td>
+                        <td>{player.player_name}</td>
                         <td>{player.player_age}</td>
                         <td>{player.player_type.substr(0, player.player_type.length - 1)}
                       </td>
                       <td>{player.player_country}</td>
                       </tr>
-                      </tbody>
-                    </table>
+                      </MDBTableBody>
+                    </MDBTable>
                     
                   </div>
                 )
-                //import link
               )}
             </h2>
-            <h2>Division: {teamObj.division}</h2>
-            {/* <p>{secondTeam.logo}</p> */}
             <p></p>
-          </div>
-        ) : (
+          </div>) : 
+          (
           "Loading..."
         )}
       </div>

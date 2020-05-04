@@ -6,7 +6,9 @@ class Home extends Component {
         return (
         
         <section className="nbaNews">
+          <br></br>
           <h3><strong>News Stream</strong></h3>
+          <br></br>
           <NbaNews allNBANews = {this.props.nbaNews}/>
           
           </section>

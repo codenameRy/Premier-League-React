@@ -55,3 +55,8 @@
     margin: 15px auto;
     border: #f1f1f1 1px solid;
   } */
+
+  .Header {
+    font-size: 4vw;
+    font-weight: bold;
+  }

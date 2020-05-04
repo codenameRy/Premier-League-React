@@ -23,7 +23,7 @@ class VideoPlayer extends Component {
         <br></br>
         <ReactPlayer
           className="react-player"
-          url="https://www.youtube.com/watch?v=Y0aADEygLKQ"
+          url="https://www.youtube.com/watch?v=8HM4wZaitQ0&t=1022s"
           controls
         />
         <br></br>
@@ -35,33 +35,34 @@ class VideoPlayer extends Component {
         <br></br>
         <ReactPlayer
           className="react-player"
-          url="https://www.youtube.com/watch?v=bOjUD-DyNBA"
+          url="https://www.youtube.com/watch?v=4Dk7eYoj5GI"
           controls
         />
         <br></br>
         <ReactPlayer
           className="react-player"
-          url="https://www.youtube.com/watch?v=BsL7pjxko7Q"
+          url="https://www.youtube.com/watch?v=rsRzMz2iM5U"
           controls
         />
         <br></br>
         <ReactPlayer
           className="react-player"
-          url="https://www.youtube.com/watch?v=zNWBz4GCiUo"
+          url="https://www.youtube.com/watch?v=Kpcb4K0OVEU"
           controls
         />
         <br></br>
         <ReactPlayer
           className="react-player"
-          url="https://www.youtube.com/watch?v=IYfSmNGx-OM"
+          url="https://www.youtube.com/watch?v=Jq7GVHUV0eA"
           controls
         />
         <br></br>
         <ReactPlayer
           className="react-player"
-          url="https://www.youtube.com/watch?v=XzNODrnkY78"
+          url="https://www.youtube.com/watch?v=9YGyP4ObC-U"
           controls
         />
+        <br></br>
       </div>
     );
   }

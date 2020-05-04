@@ -13,7 +13,7 @@ const BackgroundVideo = () => {
 
             <div className={classes.Content}>
                 <div className={classes.SubContent} >
-                    <h1>Premier League</h1>
+                    <h1 className={classes.Header}>Premier League</h1>
                     
                 </div>
             </div>

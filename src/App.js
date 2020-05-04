@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import { Switch, Route } from 'react-router';
 // import ballImage from './nba_ball.png';
 import './App.css';
 import Axios from 'axios';
-import Teams from './components/Teams'
-import TeamDetails from  './components/TeamDetails'
+// import Teams from './components/Teams'
+// import TeamDetails from  './components/TeamDetails'
 import NbaNews from './components/NbaNews';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
@@ -13,6 +12,17 @@ import VideoPlayer from './components/VideoPlayer'
 import BackgroundVideo from './components/BackgroundVideo'
 import SoccerTeams from './components/SoccerTeams'
 import SoccerPlayers from './components/SoccerPlayers'
+import History from './components/History'
+import About from './components/About'
+// import { ConnectedRouter } from 'react-router-redux'
+// import History from 'react-history/BrowserHistory'
+
+
+// export const history = History()
+
+// history.listen((location, action) => {
+//     window.scrollTo(0, 0)
+// })
 
 //NBA Team
 let baseURL = 'https://www.balldontlie.io/api/v1/'
@@ -48,21 +58,6 @@ class App extends Component {
     //define params here and pass to function
     this.params = {}
 }
-
-// getSecondAPITeam = (nickName) => {
-//   Axios.get(bballURL+bballEndPoints+nickName,{
-//       headers:{
-//         'x-rapidapi-host': 'api-nba-v1.p.rapidapi.com',
-//        'x-rapidapi-key': '50599fc345mshab48f1d06f317c5p14b68ajsn32148e6c9481'
-//       }})
-   
-//       .then((response)=>{
-//         console.log(response)
-//       this.setState({
-//         secondAPIData: response.data
-//       })
-//     })
-// }
 
   componentDidMount() {
     console.log(
@@ -134,7 +129,7 @@ getDataFromEndpoints = (endPoint, params, stateKey) => {
   
   render() {
     const {
-      teamsData,
+      // teamsData,
       nbaNews,
       soccerAPI
 } = this.state;
@@ -151,21 +146,24 @@ getDataFromEndpoints = (endPoint, params, stateKey) => {
       <Navbar/>
       <React.Fragment>
       <section className="container">
-
+        {/* <ConnectedRouter history={history}> */}
           <Switch>
           <Route exact path='/' render={(props) => <Home {...props} nbaNews={nbaNews} />}/>
           <Route exact path='/home' render={(props) => <Home {...props} nbaNews={nbaNews} />}/>
           {/* <Route exact path='/' render={(props) => <Teams {...props} allTeamsData={this.state.teamsData} />}/> */}
-          <Route exact path='/teams' render={(props) => <Teams {...props} allTeamsData={teamsData} />}/>
-          <Route exact path='/teams/:teamID' render={(props) => <TeamDetails {...props} allTeamsData={teamsData} />}/>
+          {/* <Route exact path='/teams' render={(props) => <Teams {...props} allTeamsData={teamsData} />}/>
+          <Route exact path='/teams/:teamID' render={(props) => <TeamDetails {...props} allTeamsData={teamsData} />}/> */}
           <Route exact path='/nbaNews' render={(props) => <NbaNews {...props} allNBANews={nbaNews} />}/>
           <Route exact path='/SoccerTeams' render={(props) => <SoccerTeams {...props} soccerAPI={soccerAPI} />}/>
           <Route exact path='/SoccerTeams/:playerID' render={(props) => <SoccerPlayers {...props} soccerAPI={soccerAPI} />}/>
 
 
           <Route path="/VideoPlayer" component={VideoPlayer} />
+          <Route path="/History" component={History} />
+          <Route path="/About" component={About} />
           
           </Switch>
+          {/* </ConnectedRouter> */}
           
           </section>
           </React.Fragment>

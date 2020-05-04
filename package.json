@@ -10,8 +10,10 @@
     "mdbreact": "^4.26.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-history": "^0.18.2",
     "react-player": "^2.0.1",
     "react-router-dom": "^5.1.2",
+    "react-router-redux": "^4.0.8",
     "react-scripts": "3.4.1"
   },
   "scripts": {

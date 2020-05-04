@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+
 import { Link } from "react-router-dom";
 
 class SoccerTeams extends Component {
@@ -22,7 +23,7 @@ class SoccerTeams extends Component {
   render() {
     return <div className="teams">
     {this.showTeams()}
-    </div>;
+    </div>
   }
 }
 
