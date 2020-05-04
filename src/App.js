@@ -131,6 +131,7 @@ getDataFromEndpoints = (endPoint, params, stateKey) => {
       <div className="App">
       <BackgroundVideo />
       <Navbar/>
+      <Home nbaNews={nbaNews} />
       <ScrollToTop/>
       <React.Fragment>
       <section className="container">
