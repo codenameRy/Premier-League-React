@@ -84,3 +84,7 @@
     width: 100%;
     height: auto;
   }
+
+  .navbar {
+    border-radius: 8px;
+  }

@@ -18,19 +18,13 @@ class VideoPlayer extends Component {
         <br></br>
         <ReactPlayer
           className="react-player"
-          url="https://www.youtube.com/watch?v=Se-tmvIlauA"
+          url="https://www.youtube.com/watch?v=UMcJAXwWaf0"
           controls
         />
         <br></br>
         <ReactPlayer
           className="react-player"
-          url="https://www.youtube.com/watch?v=8HM4wZaitQ0&t=1022s"
-          controls
-        />
-        <br></br>
-        <ReactPlayer
-          className="react-player"
-          url="https://www.youtube.com/watch?v=jA-y41Na_qk"
+          url="https://www.youtube.com/watch?v=7j72MeoL47o"
           controls
         />
         <br></br>
@@ -63,6 +57,19 @@ class VideoPlayer extends Component {
           url="https://www.youtube.com/watch?v=9YGyP4ObC-U"
           controls
         />
+        <br></br>
+        <ReactPlayer
+          className="react-player"
+          url="https://www.youtube.com/watch?v=E0i5JMdVHx8"
+          controls
+        />
+        <br></br>
+        
+        <div>
+          <a target="_blank" rel="noopener noreferrer" href={"https://www.youtube.com/channel/UCG5qGWdu8nIRZqJ_GgDwQ-w" }>
+          <h2>More Videos on YouTube</h2>
+          </a>
+        </div>
         <br></br>
       </div>
     );

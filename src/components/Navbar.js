@@ -10,30 +10,28 @@ export default class Navbar extends Component {
 
   render() {
     return (
-      <nav className="navbar sticky-top navbar-light bg-white">
+      <nav className="navbar sticky-top navbar-light bg-white rounded-top">
         <div className="container">
           <div>
-          
           <img src={premierLargeLogo} height="30px" className="Ball" alt="football" />
-        
         </div>
           <Link className="navbar" to="/">
-            Home
+            <strong>Home</strong>
           </Link>
           {/* <Link className="navbar" to="/Teams">
             Teams
           </Link> */}
           <Link className="navbar" to="/SoccerTeams">
-            Premier League Teams
+            <strong>Teams</strong>
           </Link>
           <Link className="navbar" to="/VideoPlayer">
-            Videos
+            <strong>Videos</strong>
           </Link>
           <Link className="navbar" to="/History">
-            History
+            <strong>History</strong>
           </Link>
           <Link className="navbar" to="/About">
-            About
+            <strong>About</strong>
           </Link>
 
         </div>
