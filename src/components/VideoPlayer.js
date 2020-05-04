@@ -6,6 +6,7 @@ class VideoPlayer extends Component {
   render() {
     return (
       <div className="player-wrapper">
+        <br></br>
         <h3>
           <strong>Videos</strong>
         </h3>

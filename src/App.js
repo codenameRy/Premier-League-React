@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Switch, Route } from 'react-router';
+import { Switch, Route, Router } from 'react-router';
 // import ballImage from './nba_ball.png';
 import './App.css';
 import Axios from 'axios';
@@ -14,17 +14,12 @@ import SoccerTeams from './components/SoccerTeams'
 import SoccerPlayers from './components/SoccerPlayers'
 import History from './components/History'
 import About from './components/About'
+import ScrollToTop from './components/ScrollToTop'
+
 // import { ConnectedRouter } from 'react-router-redux'
-// import History from 'react-history/BrowserHistory'
+// import browserHistory from 'react-history/BrowserHistory'
 
-
-// export const history = History()
-
-// history.listen((location, action) => {
-//     window.scrollTo(0, 0)
-// })
-
-//NBA Team
+//Soccer Team Info
 let baseURL = 'https://www.balldontlie.io/api/v1/'
 let endPoints = { 
   'teams': 'teams',
@@ -136,17 +131,13 @@ getDataFromEndpoints = (endPoint, params, stateKey) => {
     
     return (
       <div className="App">
-      {/* <header className="App-header">
-        <img src={ballImage} className="Ball-logo" alt="basketball" />
-        <p>
-          <strong>Hoops</strong>
-        </p>
-      </header> */}
       <BackgroundVideo />
       <Navbar/>
+      <ScrollToTop/>
       <React.Fragment>
       <section className="container">
         {/* <ConnectedRouter history={history}> */}
+        {/* <Router onUpdate={() => window.scrollTo(0, 0)} history={browserHistory}> */}
           <Switch>
           <Route exact path='/' render={(props) => <Home {...props} nbaNews={nbaNews} />}/>
           <Route exact path='/home' render={(props) => <Home {...props} nbaNews={nbaNews} />}/>
@@ -163,6 +154,7 @@ getDataFromEndpoints = (endPoint, params, stateKey) => {
           <Route path="/About" component={About} />
           
           </Switch>
+          {/* </Router> */}
           {/* </ConnectedRouter> */}
           
           </section>

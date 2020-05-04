@@ -5,6 +5,7 @@ class History extends Component {
   render() {
     return (
       <div>
+        <br></br>
         <h1>
           Discover the origins and history of the top tier of English football
         </h1> <br></br>
