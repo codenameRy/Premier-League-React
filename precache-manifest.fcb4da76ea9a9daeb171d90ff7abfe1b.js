@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "675933e72365f7ca080ce9154cadbb35",
+    "revision": "3b084c1859bfe7b6484de5dc11fe6787",
     "url": "/Premier-League-React/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Premier-League-React/static/css/2.16eeabf5.chunk.css"
   },
   {
-    "revision": "b47bf2cf70f62ed5fe98",
+    "revision": "56cf71c1621bdc47a517",
     "url": "/Premier-League-React/static/css/main.244bea7d.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Premier-League-React/static/js/2.a0796704.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b47bf2cf70f62ed5fe98",
-    "url": "/Premier-League-React/static/js/main.48ffcbcc.chunk.js"
+    "revision": "56cf71c1621bdc47a517",
+    "url": "/Premier-League-React/static/js/main.fb80640f.chunk.js"
   },
   {
     "revision": "9ec6f2a3cb9c668aba3c",
