@@ -15,12 +15,9 @@ export default class Navbar extends Component {
           <div>
           <img src={premierLargeLogo} height="30px" className="Ball" alt="football" />
         </div>
-          <Link className="navbar" to="/">
+          <Link className="navbar" to="/Home">
             <strong>Home</strong>
           </Link>
-          {/* <Link className="navbar" to="/Teams">
-            Teams
-          </Link> */}
           <Link className="navbar" to="/SoccerTeams">
             <strong>Teams</strong>
           </Link>

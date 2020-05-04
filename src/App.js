@@ -125,7 +125,7 @@ getDataFromEndpoints = (endPoint, params, stateKey) => {
       // teamsData,
       nbaNews,
       soccerAPI
-} = this.state;
+      } = this.state;
     
     return (
       <div className="App">
@@ -134,8 +134,7 @@ getDataFromEndpoints = (endPoint, params, stateKey) => {
       <ScrollToTop/>
       <React.Fragment>
       <section className="container">
-        {/* <ConnectedRouter history={history}> */}
-        {/* <Router onUpdate={() => window.scrollTo(0, 0)} history={browserHistory}> */}
+       
           <Switch>
           <Route exact path='/' render={(props) => <Home {...props} nbaNews={nbaNews} />}/>
           <Route exact path='/home' render={(props) => <Home {...props} nbaNews={nbaNews} />}/>
