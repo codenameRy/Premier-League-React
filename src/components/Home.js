@@ -5,11 +5,11 @@ class Home extends Component {
     render() {
         return (
         
-        <section className="nbaNews">
+        <section >
           <br></br>
           <h3><strong>News Stream</strong></h3>
           <br></br>
-          <NbaNews allNBANews = {this.props.nbaNews}/>
+          <NbaNews className="nbaNews" allNBANews = {this.props.nbaNews}/>
           
           </section>
             

@@ -3,13 +3,13 @@
 }
 
 .Ball-logo {
-  height: 16vmin;
+  height: 24vmin;
   pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .Ball-logo {
-    animation: App-logo-spin infinite 10s linear;
+    animation: App-logo-spin infinite 8s linear;
   }
 }
 
