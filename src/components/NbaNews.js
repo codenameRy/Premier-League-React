@@ -39,7 +39,8 @@ class NbaNews extends Component {
   render() {
     return (
       <MDBMedia list className="mt-3">
-        <div>{this.nbaNews()}</div>
+        <div>{this.nbaNews()}
+        </div>
       </MDBMedia>
     );
   }
