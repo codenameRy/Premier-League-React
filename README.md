@@ -12,4 +12,10 @@ Deployed using <a href="https://premier-league-react.netlify.app/">Netlify</a>
   <img src="/src/components/images/netlify_logo.png" alt="Netlify" width="460" height="120">
 </a>
 
+## Built With
 
+* [ReactJS](https://reactjs.org) - JavaScript library for building user interfaces.
+* [Material Design for Bootstrap (React version)](https://mdbootstrap.com/docs/react/) - Open source toolkit based on Bootstrap for developing Material Design apps with HTML, CSS, and JS
+* [NPM ReactPlayer](https://www.npmjs.com/package/react-player) - A React component for playing a variety of web videos including YouTube content
+* [API - APIFootball.com](https://apifootball.com") - Used to generate football feeds
+* [API - NewsAPI.org](https://newsapi.org) - Used to generate live news and article feeds 
