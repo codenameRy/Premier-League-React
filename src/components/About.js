@@ -11,8 +11,7 @@ class About extends Component {
         <h5>
           This works by fetching relevant Premier League soccer news articles
           and player team information to display content within the application.
-          The ReactPlayer component was used to generate YouTube video content
-          as well.
+          The ReactPlayer component is used to generate YouTube video content.
         </h5>
         <br></br>
         <p>
