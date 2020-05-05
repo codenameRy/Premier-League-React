@@ -89,12 +89,15 @@
   }
 
   .media{
+    max-width: 40vw;
     flex-wrap: wrap;
   }
 
   .media-object{
     max-width: 40vw;
-    min-width: 230px;
+    
+    flex-wrap: wrap;
+    
   }
 
   .navbar {
