@@ -8,7 +8,7 @@ The ReactPlayer component is used to generate YouTube video content.
 
 Deployed using netlify.com
 <a href="https://www.netlify.com">Netlify.com</a>
-<img src="/src/components/images/netlify_logo.png" alt="Netlify" width="919" height="250">
+<img src="/src/components/images/netlify_logo.png" alt="Netlify" width="600" height="200">
 
 
 ![](src/components/images/netlify_logo.png)
