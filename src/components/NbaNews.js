@@ -3,10 +3,10 @@ import { MDBMedia } from "mdbreact";
 // import { Route } from 'react-router';
 
 class NbaNews extends Component {
-  nbaNews = () => {
+  news = () => {
     return this.props.allNBANews.map((eachNews, i) => {
       return (
-        <div key={i}>
+        <div key={i} className="container">
           <MDBMedia tag="li">
             <MDBMedia
               left
@@ -16,7 +16,7 @@ class NbaNews extends Component {
               
             >
               <MDBMedia
-                style={{ width: "50vh" }}
+                // style={{ width: "50vh" }}
                 object
                 src={eachNews.urlToImage}
                 alt="Generic placeholder image"
@@ -39,7 +39,8 @@ class NbaNews extends Component {
   render() {
     return (
       <MDBMedia list className="mt-3">
-        <div>{this.nbaNews()}
+        <div>
+          {this.news()}
         </div>
       </MDBMedia>
     );

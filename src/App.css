@@ -41,7 +41,7 @@
   display: flex; 
   flex-direction: row;
   justify-content: space-evenly;
-  width: 100%;
+  /* width: 100%; */
   padding: 0 10px;
 }
 
@@ -60,9 +60,9 @@
     position: relative; 
   }
   
-  .react-player > div {
+  /* .react-player > div {
     position: absolute 
-  }
+  } */
 
   .teams {
     display: flex;
@@ -79,9 +79,22 @@
     padding: 1em;
   }
 
+  .react-player{
+    max-width: 96vw;
+  }
+
   .responsive {
     width: 100%;
     height: auto;
+  }
+
+  .media{
+    flex-wrap: wrap;
+  }
+
+  .media-object{
+    max-width: 40vw;
+    min-width: 230px;
   }
 
   .navbar {

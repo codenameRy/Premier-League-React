@@ -6,8 +6,8 @@ class About extends Component {
     return (
       <div>
         <br></br>
-        <h4>Premier League is single-page application built with React</h4>
-        <h4><strong>Project by: Ryan Lee</strong></h4>
+        <h4><strong>Premier League is single-page application built with React</strong></h4>
+        <h4>Project by: Ryan Lee</h4>
         <br></br>
         <h5>
           This works by fetching relevant Premier League soccer news articles

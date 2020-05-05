@@ -10,7 +10,6 @@ class Home extends Component {
           <h3><strong>News Stream</strong></h3>
           <br></br>
           <NbaNews className="nbaNews" allNBANews = {this.props.nbaNews}/>
-          
           </section>
             
         );
