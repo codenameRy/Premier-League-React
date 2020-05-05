@@ -7,10 +7,8 @@ The ReactPlayer component is used to generate YouTube video content.
 ## Deployment
 
 Deployed using netlify.com
-<a href="https://www.netlify.com">Netlify.com
-  <img src="/src/components/images/netlify_logo.png" alt="Netlify" width="800" height="200">
+<a href="https://premier-league-react.netlify.app/">Netlify.com
+  <img src="/src/components/images/netlify_logo.png" alt="Netlify" width="660" height="200">
 </a>
 
-
-![](src/components/images/netlify_logo.png)
 
