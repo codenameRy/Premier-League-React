@@ -7,6 +7,7 @@ class About extends Component {
       <div>
         <br></br>
         <h4>Premier League is single-page application built with React</h4>
+        <h4><strong>Project by: Ryan Lee</strong></h4>
         <br></br>
         <h5>
           This works by fetching relevant Premier League soccer news articles
@@ -15,7 +16,7 @@ class About extends Component {
         </h5>
         <br></br>
         <p>
-          <h5>Credit to:</h5>
+          <h5><strong>Sources</strong></h5>
           <a
             target="_blank"
             rel="noopener noreferrer"
