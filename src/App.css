@@ -91,6 +91,7 @@
   .media{
     max-width: 40vw;
     flex-wrap: wrap;
+    align-items: center;
   }
 
   .media-object{

@@ -57,6 +57,6 @@
   } */
 
   .Header {
-    font-size: 6vw;
+    font-size: max(5vw, 40px);
     font-weight: bold;
   }
