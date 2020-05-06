@@ -26,5 +26,3 @@ Deployed using <a href="https://premier-league-react.netlify.app/">Netlify</a>
 
 ## Acknowledgments
 * [Premier League](https://www.premierleague.com) - Reference for content used on this web application.
-
-

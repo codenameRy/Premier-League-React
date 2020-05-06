@@ -11,7 +11,7 @@ class History extends Component {
         </h1> <br></br>
         <img src={trophyPic} className="responsive" alt="football" />
         
-        <h2>Founded February 20, 1992 - 28 Years Ago</h2>
+        <h2>Founded in 1992 - 28 Years Ago</h2>
         <br></br>
         <div>
           <p>A total of 49 clubs have played in the Premier League since its
