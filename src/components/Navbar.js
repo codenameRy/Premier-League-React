@@ -29,28 +29,28 @@ class Navbar extends Component {
 
         <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
           <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li className="nav-item ">
+          <li className="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
               <Link className="nav-link" to="/Home">
               <strong>Home</strong> 
                 {/* <span className="sr-only">(current)</span> */}
               </Link>
             </li>
-            <li className="nav-item">
-            <Link className="nav-link" to="/SoccerTeams">
+            <li className="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+            <Link className="nav-link" to="/SoccerTeams" >
             <strong>Teams</strong>
           </Link>
             </li>
-            <li className="nav-item">
+            <li className="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
               <Link className="nav-link" to="/VideoPlayer">
                 <strong>Videos</strong>
               </Link>
             </li>
-            <li className="nav-item">
+            <li className="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
               <Link className="nav-link" to="/History">
               <strong>History</strong>
               </Link>
             </li>
-            <li className="nav-item">
+            <li className="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
               <Link className="nav-link" to="/About">
               <strong>About</strong>
               </Link>
