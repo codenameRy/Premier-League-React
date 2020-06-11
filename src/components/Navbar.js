@@ -28,7 +28,7 @@ class Navbar extends Component {
         
 
         <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
-          <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
+          <ul className="navbar-nav mr-auto mt-2 mt-lg-0 ">
           <li className="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
               <Link className="nav-link" to="/Home">
               <strong>Home</strong> 

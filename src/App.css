@@ -101,8 +101,13 @@
     
   }
 
-  .navbar {
-    border-radius: 8px;
+  .navbar .navbar-nav {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .navbar .navbar-collapse {
+    text-align: center;
   }
 
   /* @media screen and (max-width: 600px) {

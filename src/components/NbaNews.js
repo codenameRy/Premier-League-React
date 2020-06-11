@@ -3,6 +3,7 @@ import { MDBMedia } from "mdbreact";
 // import { Route } from 'react-router';
 
 class NbaNews extends Component {
+  
   news = () => {
     return this.props.allNBANews.map((eachNews, i) => {
       return (
