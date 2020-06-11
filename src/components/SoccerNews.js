@@ -2,10 +2,10 @@ import React, { Component } from "react";
 import { MDBMedia } from "mdbreact";
 // import { Route } from 'react-router';
 
-class NbaNews extends Component {
+class SoccerNews extends Component {
   
   news = () => {
-    return this.props.allNBANews.map((eachNews, i) => {
+    return this.props.allSoccerNews.map((eachNews, i) => {
       return (
         <div key={i} className="container">
           <MDBMedia tag="li">
@@ -19,7 +19,7 @@ class NbaNews extends Component {
               <MDBMedia
                 // style={{ width: "50vh" }}
                 object
-                src={eachNews.urlToImage}
+                src={eachNews.image}
                 alt="Generic placeholder image"
                 className="responsive" 
               />
@@ -48,4 +48,4 @@ class NbaNews extends Component {
   }
 }
 
-export default NbaNews;
+export default SoccerNews;

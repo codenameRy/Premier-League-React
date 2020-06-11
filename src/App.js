@@ -5,7 +5,7 @@ import './App.css';
 import Axios from 'axios';
 // import Teams from './components/Teams'
 // import TeamDetails from  './components/TeamDetails'
-import NbaNews from './components/NbaNews';
+import SoccerNews from './components/SoccerNews';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import VideoPlayer from './components/VideoPlayer'
@@ -17,34 +17,22 @@ import About from './components/About'
 import ScrollToTop from './components/ScrollToTop'
 
 
-//Soccer Team Info
-let baseURL = 'https://www.balldontlie.io/api/v1/'
-let endPoints = { 
-  'teams': 'teams',
-  'players': 'players',
-  'seasonAvg': 'season_averages?player_ids[]=237',
-}
-
-//NBA News - News API
-let newsBaseURL = 'https://newsapi.org/'
-let newEndPoint = 'v2/everything?q=premierleague&language=en&sortBy=popularity&apiKey=38407b35f95c48359a0c4b5337e10220'
+// Premier League News - News API - Update June 10, 2020 
+let newsBaseURL = 'https://gnews.io/api/v3/'
+let newEndPoint = 'search?q=premier+league&token=9d69881169213520621ce1ebe0779d82'
 let newEndPointAbbrv = newEndPoint
 
-// //New Sports API
-// let bballURL = 'https://api-nba-v1.p.rapidapi.com/'
-// let bballEndPoints = 'teams/nickName/'
-
-// //3rd Sports API
-// let sportsAPI = 'https://api-nba-v1.p.rapidapi.com/'
-// let sEndpoint = 'teams'
+// Premier League News - News API - Outdated from May 22, 2020
+// let newsBaseURL = 'https://newsapi.org/'
+// let newEndPoint = 'v2/everything?q=premierleague&language=en&sortBy=popularity&apiKey=38407b35f95c48359a0c4b5337e10220'
+// let newEndPointAbbrv = newEndPoint
 
 class App extends Component {
 
   constructor(props) {
     super(props);
     this.state = { 
-      teamsData: [],
-      nbaNews :[],
+      SoccerNews :[],
       newNBATeam: [],
       soccerAPI: []
     }
@@ -56,22 +44,13 @@ class App extends Component {
     console.log(
       'component mounted'
     )
-    // Foreach key in the endPoints we hit the AXIOS GET.
-            Object.keys(endPoints).forEach(key => {
-                // Call Axios from here
-                this.getDataFromEndpoints(
-                    endPoints[key],
-                    this.params,
-                    key
-                );
-            });
             
             //API Call for news
             Axios.get(newsBaseURL+newEndPointAbbrv)
           .then(responseNews => {
             console.log(responseNews)  
             this.setState({
-              nbaNews: responseNews.data.articles
+              SoccerNews: responseNews.data.articles
             })
           })
 
@@ -92,24 +71,6 @@ class App extends Component {
 
     /**API ENDPOINT FUNCTIONS */
     
-getDataFromEndpoints = (endPoint, params, stateKey) => {
-  this.setState({
-              [`${stateKey}DataLoading`]: true,
-              [`${stateKey}Data`]: [],
-              [`${stateKey}DataError`]: null,
-          }, () => {
-              Axios.get(`${baseURL}${endPoint}`)
-              .then(response => {
-                // console.log(response)  
-                this.setState({
-                  [`${stateKey}Data`]: response.data.data
-                });
-              })
-              .catch(error => {
-                console.log(error)
-              }) 
-          });
-      }
 
 
   //Step 1 -API Call
@@ -122,8 +83,7 @@ getDataFromEndpoints = (endPoint, params, stateKey) => {
   
   render() {
     const {
-      // teamsData,
-      nbaNews,
+      SoccerNews,
       soccerAPI
       } = this.state;
     
@@ -136,27 +96,16 @@ getDataFromEndpoints = (endPoint, params, stateKey) => {
       <section className="container">
        
           <Switch>
-          {/* <Route exact path ='/' render={(props) => <Home {...props} nbaNews={nbaNews} />}/> */}
-          
-          
-          
-          {/* <Route exact path='/' render={(props) => <Teams {...props} allTeamsData={this.state.teamsData} />}/> */}
-          {/* <Route exact path='/teams' render={(props) => <Teams {...props} allTeamsData={teamsData} />}/>
-          <Route exact path='/teams/:teamID' render={(props) => <TeamDetails {...props} allTeamsData={teamsData} />}/> */}
-          <Route exact path='/nbaNews' render={(props) => <NbaNews {...props} allNBANews={nbaNews} />}/>
+          <Route exact path='/SoccerNews' render={(props) => <SoccerNews {...props} allSoccerNews={SoccerNews} />}/>
           <Route exact path='/SoccerTeams' render={(props) => <SoccerTeams {...props} soccerAPI={soccerAPI} />}/>
           <Route exact path='/SoccerTeams/:playerID' render={(props) => <SoccerPlayers {...props} soccerAPI={soccerAPI} />}/>
-
-
           <Route path="/VideoPlayer" component={VideoPlayer} />
           <Route path="/History" component={History} />
           <Route path="/About" component={About} />
-          <Route path='/home' render={(props) => <Home {...props} nbaNews={nbaNews} />}/>
-          <Route path ='/' render={(props) => <Home {...props} nbaNews={nbaNews} />}/>
+          <Route path='/home' render={(props) => <Home {...props} SoccerNews={SoccerNews} />}/>
+          <Route path ='/' render={(props) => <Home {...props} SoccerNews={SoccerNews} />}/>
           
           </Switch>
-          {/* </Router> */}
-          {/* </ConnectedRouter> */}
           
           </section>
           </React.Fragment>

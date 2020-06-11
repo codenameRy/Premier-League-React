@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import NbaNews from './NbaNews'
+import SoccerNews from './SoccerNews'
 
 class Home extends Component {
     render() {
@@ -9,7 +9,7 @@ class Home extends Component {
           <br></br>
           <h3><strong>News Stream</strong></h3>
           <br></br>
-          <NbaNews className="nbaNews" allNBANews = {this.props.nbaNews}/>
+          <SoccerNews className="SoccerNews" allSoccerNews = {this.props.SoccerNews}/>
           </section>
             
         );
