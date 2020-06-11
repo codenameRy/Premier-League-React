@@ -26,7 +26,7 @@ let endPoints = {
 }
 
 //NBA News - News API
-let newsBaseURL = 'http://newsapi.org/'
+let newsBaseURL = 'https://newsapi.org/'
 let newEndPoint = 'v2/everything?q=premierleague&language=en&sortBy=popularity&apiKey=38407b35f95c48359a0c4b5337e10220'
 let newEndPointAbbrv = newEndPoint
 
