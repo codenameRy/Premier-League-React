@@ -34,9 +34,9 @@ class About extends Component {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href={"https://newsapi.org"}
+            href={"https://gnews.io"}
           >
-            <h5>NewsAPI.org</h5>
+            <h5>GNews.io</h5>
           </a>
         </p>
         <div>

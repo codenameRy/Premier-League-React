@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router';
-// import ballImage from './nba_ball.png';
 import './App.css';
 import Axios from 'axios';
-// import Teams from './components/Teams'
-// import TeamDetails from  './components/TeamDetails'
 import SoccerNews from './components/SoccerNews';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
@@ -68,18 +65,7 @@ class App extends Component {
           
     } // End on componentDid Mount
             
-
     /**API ENDPOINT FUNCTIONS */
-    
-
-
-  //Step 1 -API Call
-  //STep 2 - Add'l APIs calls
-  //Step 3 - Display content
-  //function for 3 API calls and load within componentDidMount
-
- //API Endpoint Function
-
   
   render() {
     const {
