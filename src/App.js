@@ -16,7 +16,7 @@ import ScrollToTop from './components/ScrollToTop'
 
 // Premier League News - News API - Update June 10, 2020 
 let newsBaseURL = 'https://gnews.io/api/v3/'
-let newEndPoint = 'search?q=premier+league&token=9d69881169213520621ce1ebe0779d82'
+let newEndPoint = 'search?q=premier+league+football&country=uk&token=9d69881169213520621ce1ebe0779d82'
 let newEndPointAbbrv = newEndPoint
 
 // Premier League News - News API - Outdated from May 22, 2020
