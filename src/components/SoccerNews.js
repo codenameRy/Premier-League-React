@@ -3,6 +3,10 @@ import { MDBMedia } from "mdbreact";
 // import { Route } from 'react-router';
 
 class SoccerNews extends Component {
+ 
+  addDefaultSrc(ev){
+    ev.target.src = 'some default image url'
+  }
   
   news = () => {
     return this.props.allSoccerNews.map((eachNews, i) => {
@@ -14,11 +18,12 @@ class SoccerNews extends Component {
               href={eachNews.url}
               target="_blank"
               rel="noopener noreferrer"
-              
             >
               <MDBMedia
+              
                 // style={{ width: "50vh" }}
                 object
+                onError={this.addDefaultSrc}
                 src={eachNews.image}
                 alt="Generic placeholder image"
                 className="responsive" 
