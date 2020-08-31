@@ -4,9 +4,6 @@ import { MDBMedia } from "mdbreact";
 
 class SoccerNews extends Component {
  
-  addDefaultSrc(ev){
-    ev.target.src = 'some default image url'
-  }
   
   news = () => {
     return this.props.allSoccerNews.map((eachNews, i) => {
@@ -20,10 +17,7 @@ class SoccerNews extends Component {
               rel="noopener noreferrer"
             >
               <MDBMedia
-              
-                // style={{ width: "50vh" }}
                 object
-                onError={this.addDefaultSrc}
                 src={eachNews.image}
                 alt="Generic placeholder image"
                 className="responsive" 
