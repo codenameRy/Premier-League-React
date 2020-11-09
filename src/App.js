@@ -48,8 +48,8 @@ class App extends Component {
             console.log(responseNews)  
             this.setState({
               SoccerNews: responseNews.data.articles
-            })
-          })
+            });
+          }).catch(error => console.log(error));
 
           //Soccer Teams EndPoint
           let URL = 'https://apiv2.apifootball.com/?action=get_teams&league_id=148&APIkey=5a5136a8e97300f3bf6c932e3dcfe239c20c51661a12794cc263c20f94ef6a8b'
@@ -60,8 +60,8 @@ class App extends Component {
               soccerAPI: response.data
               // soccerPlayers: response.data.players
  
-            }) 
-          })
+            }); 
+          }).catch(error => console.log(error));
           
     } // End on componentDid Mount
             
