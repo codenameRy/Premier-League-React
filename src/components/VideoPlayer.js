@@ -12,7 +12,7 @@ class VideoPlayer extends Component {
         </h3>
         <ReactPlayer
           className="react-player"
-          url="https://www.youtube.com/watch?v=d5yOIK4P5DU"
+          url="https://www.youtube.com/watch?v=_LvRcXU66ko"
           
           controls
         />
@@ -20,6 +20,12 @@ class VideoPlayer extends Component {
         <ReactPlayer
           className="react-player"
           url="https://www.youtube.com/watch?v=UMcJAXwWaf0"
+          controls
+        />
+        <br></br>
+        <ReactPlayer
+          className="react-player"
+          url="https://www.youtube.com/watch?v=lWKPxjkVcAw"
           controls
         />
         <br></br>
